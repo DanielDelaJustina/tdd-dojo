@@ -9,6 +9,7 @@ import { AuthService } from './auth.service';
 export class LoginComponent implements OnInit {
   form: FormGroup;
   submitted = false;
+  messageInvalidEmail = 'Please enter a valid email.';
 
   constructor(
     private formBuilder: FormBuilder,

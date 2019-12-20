@@ -70,7 +70,7 @@ describe('LoginComponent', () => {
 
     expect(errors.required).toBeFalsy();
     expect(errors.pattern).toBeTruthy();
-    expect(email.valid).toBeFalsy();
+    expect(email.invalid).toBeTruthy();
   });
 
   it('should validate email format correctly', () => {
@@ -92,7 +92,7 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
     expect(elements.querySelector('#email-error')).toBeTruthy();
     expect(elements.querySelector('#email-error').textContent).toContain(
-      'Please enter a valid email.'
+      component.messageInvalidEmail
     );
   });
 

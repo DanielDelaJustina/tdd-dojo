@@ -4,7 +4,7 @@
   </label>
   <input id="email" type="email" placeholder="Email" formControlName="email" />
   <span *ngIf="submitted && form.controls.email.invalid" id="email-error">
-    Please enter a valid email.
+    {{ messageInvalidEmail }}
   </span>
   <label for="password">
       Password
